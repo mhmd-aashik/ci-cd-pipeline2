@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="max-w-2xl mx-auto h-screen flex items-center justify-center flex-col py-8">
@@ -18,6 +20,12 @@ export default function Home() {
           tincidunt. Ut placerat, arcu in vehicula fringilla, orci massa commodo
           elit, id ullamcorper libero nulla sit amet justo.
         </p>
+
+
+      <Link href="https://www.google.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
+        Visit Google
+      </Link>
+
       </article>
     </div>
   );
