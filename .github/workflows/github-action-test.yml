@@ -68,6 +68,7 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
+          status: ${{ job.status }}
           channel: "#github-ci-cd"
           message: >
             *Build Notification: 🤖*
@@ -92,6 +93,7 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
+          status: ${{ job.status }}
           channel: "#github-ci-cd"
           message: >
             *Deployment Notification: 🚀*
