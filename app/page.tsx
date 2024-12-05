@@ -24,7 +24,7 @@ export default function Home() {
 
       <Link href="https://www.google.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
         Visit Google
-      </Link>
+      
 
       </article>
     </div>
