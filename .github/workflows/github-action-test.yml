@@ -23,7 +23,7 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -81,7 +81,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: build
     steps:
       - name: Deploy to GitHub Pages
@@ -97,6 +97,6 @@ jobs:
           steps: ${{ toJson(steps) }}
           channel: "#github-ci-cd"
           message: >
-            CI/CD Pipeline Update :robot: - Status: ${{ job.status }}
-            ${{ job.status == 'success' && ':rocket: :white_check_mark:' || ':x:' }}
+            CI/CD Pipeline Update :🤖: - Status: ${{ job.status }}
+            ${{ job.status == '🤩 success' && ':rocket: :white_check_mark:' || 'faild ❌'  }}
         if: always()
